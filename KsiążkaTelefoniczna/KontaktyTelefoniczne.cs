@@ -8,9 +8,9 @@ namespace KsiążkaTelefoniczna
 {
     public class KontaktyTelefoniczne 
     {
-        private string _imie;
-        private string _nazwisko;
-        private string _nrTel;
+        public string _imie;
+        public string _nazwisko;
+        public string _nrTel;
 
         public KontaktyTelefoniczne(string imie,string nazwisko,string nrTel)
         {

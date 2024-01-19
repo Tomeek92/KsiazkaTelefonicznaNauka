@@ -23,7 +23,10 @@ namespace KsiążkaTelefoniczna
             
             KontaktyTelefoniczne kontakty = new KontaktyTelefoniczne(" "," "," ");
             TextBox2.Text = kontakty.ToString();
-            
+            DodawanieKontaktow nowyKontakt = new DodawanieKontaktow(" "," "," ");
+            nowyKontakt.ZapiszDane(TextBox2.Text);
+           
+
         }
 
     
