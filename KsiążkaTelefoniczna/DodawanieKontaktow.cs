@@ -22,5 +22,6 @@ namespace KsiążkaTelefoniczna
                 _kontakty = new KontaktyTelefoniczne(dane[0], dane[1], dane[2]);
             }
         }
+       
     }
 }
