@@ -7,13 +7,51 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="900">
     <Grid>
-        <TextBox HorizontalAlignment="Left" x:Name="TextBox1" Height="478" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="327" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" x:Name="TextBox1" Height="478" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="327" TextChanged="TextBox_TextChanged" IsReadOnly="True"/>
         <TextBox HorizontalAlignment="Left" x:Name="TextBox2"   Height="247" Margin="374,10,0,0" TextWrapping="Wrap" Text="Add to Phone Book" VerticalAlignment="Top" Width="493" TextChanged="TextBox2_TextChanged" />
-        <Button Content="Add" HorizontalAlignment="Left" Height="117" Margin="642,308,0,0" VerticalAlignment="Top" Width="225" Click="Button_Click"/>
-        <Button Content="Clear" HorizontalAlignment="Left" Height="117" Margin="374,308,0,0" VerticalAlignment="Top" Width="208" Click="Button_Click_1"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Height="63" Margin="208,539,0,0" VerticalAlignment="Top" Width="129"/>
-        <Button Content="Clear" HorizontalAlignment="Left" Height="63" Margin="34,539,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click_2"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="82" Margin="509,488,0,0" VerticalAlignment="Top" Width="176" Click="Button_Click_3"/>
+        <Button Content="Add" HorizontalAlignment="Left" Height="117" Margin="642,308,0,0" VerticalAlignment="Top" Width="225" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="LightGray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
+        <Button Content="Clear" HorizontalAlignment="Left" Height="117" Margin="374,308,0,0" VerticalAlignment="Top" Width="208" Click="Button_Click_1">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="LightGray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Content="Clear" HorizontalAlignment="Left" Height="63" Margin="10,507,0,0" VerticalAlignment="Top" Width="327" Click="Button_Click_2">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="Gray" BorderThickness="1" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="LightGray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>
