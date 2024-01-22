@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace KsiążkaTelefoniczna
 {
-    public class DodawanieKontaktow : IDodawanieKontaktu
+    public interface IDodawanieKontaktu
     {
 
-        public void ZapiszDane()
-        {
-            Console.WriteLine("Zapisywanie danych....");
-        }
+        public void ZapiszDane();
         
-       
+
+        
        
     }
 }

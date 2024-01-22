@@ -14,13 +14,14 @@ namespace KsiążkaTelefoniczna
         public string _imie;
         public string _nazwisko;
         public string _nrTel;
+      
 
         public KontaktyTelefoniczne(string imie,string nazwisko,string nrTel)
         {
             imie = _imie;
             nazwisko = _nazwisko;
             nrTel = _nrTel;
-
+           
            
         }
         public override string ToString() => $"Imię: {_imie}\nNazwisko: {_nazwisko}\nNrTel: {_nrTel}";
@@ -38,7 +39,22 @@ namespace KsiążkaTelefoniczna
             
         }
 
+       public IDodawanieKontaktu _zapiszDane;
+
+        public KontaktyTelefoniczne(IDodawanieKontaktu zapiszDane)
+        {
+            
+            _zapiszDane = zapiszDane;
+
+            
+        }
+       
         
+       
+        
+       
+
+
     }
 
 

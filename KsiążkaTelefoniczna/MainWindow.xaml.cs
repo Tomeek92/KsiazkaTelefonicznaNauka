@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -27,10 +28,15 @@ namespace KsiążkaTelefoniczna
             TextBox2.Text = kontakty.ToString();
             TextBox2.FontFamily = new FontFamily("Arial");
             TextBox2.FontSize = 24;
+            
 
 
-            DodawanieKontaktow nowyKontakt = new DodawanieKontaktow(" ", " ", " ");
-            nowyKontakt.ZapiszDane(TextBox2.Text);
+            DodawanieKontaktow zapisDanych = new DodawanieKontaktow();
+            zapisDanych.ZapiszDane();
+            
+           
+            
+            
 
 
 
