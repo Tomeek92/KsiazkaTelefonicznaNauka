@@ -28,7 +28,8 @@ namespace KsiążkaTelefoniczna
             TextBox2.Text = kontakty.ToString();
             TextBox2.FontFamily = new FontFamily("Arial");
             TextBox2.FontSize = 24;
-            
+            KlasaGeneryczna<int> myint = new KlasaGeneryczna<int>(31);
+            KlasaGeneryczna<string> myString = new KlasaGeneryczna<string>("Andrzej");
 
 
             DodawanieKontaktow zapisDanych = new DodawanieKontaktow();
